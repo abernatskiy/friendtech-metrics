@@ -1,0 +1,13 @@
+type Trade @entity {
+  id: ID!
+  block: Int!
+  trader: String! @index
+  subject: String! @index
+  isBuy: Boolean!
+  shareAmount: BigInt!
+  ethAmount: BigInt!
+  protocolEthAmount: BigInt!
+  subjectEthAmount: BigInt!
+  supply: BigInt!
+  txnHash: String!
+}
