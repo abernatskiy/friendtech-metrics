@@ -1,7 +1,7 @@
 manifestVersion: subsquid.io/v0.1
 name: friendtech-metrics
 version: 1
-description: 'The very first evm squid from manifest  '
+description: 'Squid indexing Friend.tech data'
 build: 
 deploy:
   addons:
