@@ -3,7 +3,7 @@ import {Trade} from './model'
 import {processor, FRIENDTECH_CONTRACT} from './processor'
 import * as friendTechAbi from './abi/friendTechAbi'
 
-processor.run(new TypeormDatabase({supportHotBlocks: false}), async (ctx) => {
+processor.run(new TypeormDatabase({supportHotBlocks: true}), async (ctx) => {
     const trades: Trade[] = []
 
     for (let block of ctx.blocks) {

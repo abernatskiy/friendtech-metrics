@@ -14,6 +14,7 @@ export const FRIENDTECH_CONTRACT = '0xCF205808Ed36593aa40a44F10c7f7C2F67d4A4d4'.
 export const processor = new EvmBatchProcessor()
     .setDataSource({
         archive: lookupArchive('base-mainnet'),
+        chain: 'https://rpc.ankr.com/base',
     })
     .setFinalityConfirmation(75)
     .setBlockRange({
