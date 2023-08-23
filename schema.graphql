@@ -1,6 +1,6 @@
 type Trade @entity {
   id: ID!
-  block: Int!
+  block: Int! @index
   trader: String! @index
   subject: String! @index
   isBuy: Boolean!
@@ -9,5 +9,5 @@ type Trade @entity {
   protocolEthAmount: BigInt!
   subjectEthAmount: BigInt!
   supply: BigInt!
-  txnHash: String!
+  txnHash: String! @index
 }

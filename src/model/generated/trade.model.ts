@@ -10,6 +10,7 @@ export class Trade {
     @PrimaryColumn_()
     id!: string
 
+    @Index_()
     @Column_("int4", {nullable: false})
     block!: number
 
@@ -39,6 +40,7 @@ export class Trade {
     @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
     supply!: bigint
 
+    @Index_()
     @Column_("text", {nullable: false})
     txnHash!: string
 }
