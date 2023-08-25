@@ -5,7 +5,10 @@ description: 'Squid indexing Friend.tech data'
 build: 
 deploy:
   addons:
-    postgres: 
+    postgres:
+      config:
+        max_pred_locks_per_transaction: 1024
+        max_locks_per_transaction: 1024
   processor:
     cmd:
       - node
