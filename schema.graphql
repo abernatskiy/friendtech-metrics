@@ -11,3 +11,9 @@ type Trade @entity {
   supply: BigInt!
   txnHash: String! @index
 }
+
+type VolumeByBlock @entity {
+	id: ID!
+	block: Int! @index
+	totalEthAmount: BigInt!
+}
