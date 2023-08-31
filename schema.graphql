@@ -12,8 +12,32 @@ type Trade @entity {
   txnHash: String! @index
 }
 
-type VolumeByBlock @entity {
-	id: ID!
+type Subject @entity {
+	id: ID! # same as address
+	address: String! @index
+	firstTradeBlock: Int! @index
+	supply: BigInt!
+	totalTrades: Int!
+	totalEthVolume: BigInt!
+	totalEthBuyVolume: BigInt!
+	totalEthSellVolume: BigInt!
+	totalShareVolume: BigInt!
+	totalShareBuyVolume: BigInt!
+	totalShareSellVolume: BigInt!
+	subjectEthTotal: BigInt!
+}
+
+type BlockStats @entity {
+	id: ID! # `${block}`
 	block: Int! @index
-	totalEthAmount: BigInt!
+	trades: Int!
+	numInvolvedSubjects: Int!
+	ethVolume: BigInt!
+	ethBuyVolume: BigInt!
+	ethSellVolume: BigInt!
+	shareVolume: BigInt!
+	shareBuyVolume: BigInt!
+	shareSellVolume: BigInt!
+	subjectEthTotal: BigInt!
+	protocolEthTotal: BigInt! # should be equal to the subject fees total
 }
