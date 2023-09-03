@@ -25,6 +25,13 @@ type Subject @entity {
 	totalShareBuyVolume: BigInt!
 	totalShareSellVolume: BigInt!
 	subjectEthTotal: BigInt!
+	ownShareVolume: BigInt!
+	ownShareBought: BigInt!
+	ownShareSold: BigInt!
+	ethPaidForOwnShare: BigInt!
+	ethReceivedForOwnShare: BigInt!
+	ownShareTradingProfit: BigInt!
+	ultimateSubjectProfit: BigInt!
 }
 
 type BlockStats @entity {
@@ -32,6 +39,20 @@ type BlockStats @entity {
 	block: Int! @index
 	trades: Int!
 	numInvolvedSubjects: Int!
+	ethVolume: BigInt!
+	ethBuyVolume: BigInt!
+	ethSellVolume: BigInt!
+	shareVolume: BigInt!
+	shareBuyVolume: BigInt!
+	shareSellVolume: BigInt!
+	subjectEthTotal: BigInt!
+	protocolEthTotal: BigInt! # should be equal to the subject fees total
+}
+
+type AllTimeStats @entity {
+	id: ID!
+	trades: Int!
+	numSubjects: Int!
 	ethVolume: BigInt!
 	ethBuyVolume: BigInt!
 	ethSellVolume: BigInt!

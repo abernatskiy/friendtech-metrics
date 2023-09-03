@@ -44,4 +44,25 @@ export class Subject {
 
     @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
     subjectEthTotal!: bigint
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
+    ownShareVolume!: bigint
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
+    ownShareBought!: bigint
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
+    ownShareSold!: bigint
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
+    ethPaidForOwnShare!: bigint
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
+    ethReceivedForOwnShare!: bigint
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
+    ownShareTradingProfit!: bigint
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
+    ultimateSubjectProfit!: bigint
 }
