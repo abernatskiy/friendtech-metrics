@@ -15,8 +15,8 @@ export const processor = new EvmBatchProcessor()
     .setDataSource({
         archive: lookupArchive('base-mainnet'),
         chain: {
-            url: 'https://rpc.ankr.com/base',
-            rateLimit: 3,
+            url: process.env.RPC_BASE_HTTP,
+            rateLimit: 10,
         }
     })
     .setFinalityConfirmation(75)

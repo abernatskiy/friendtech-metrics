@@ -9,6 +9,8 @@ deploy:
       config:
         max_pred_locks_per_transaction: 1024
         max_locks_per_transaction: 1024
+    rpc:
+      - base:http
   processor:
     cmd:
       - node
@@ -26,3 +28,7 @@ deploy:
       - '--dumb-cache-max-age'
       - '1000'
       - '--subscriptions'
+scale:
+  addons:
+    rpc:
+      max-rate: 10rps
